@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - CarTrader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .top-nav {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    .top-nav .logo {
+      font-size: 28px;
+      font-weight: 700;
+      text-decoration: none;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .top-nav .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .top-nav .nav-links a {
+      color: #333;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.2s;
+      padding: 8px 0;
+      position: relative;
+    }
+    .top-nav .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      transition: width 0.3s;
+    }
+    .top-nav .nav-links a:hover {
+      color: #667eea;
+    }
+    .top-nav .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      flex: 1;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    .welcome-card {
+      background: white;
+      padding: 48px;
+      border-radius: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 90%;
+      width: 700px;
+    }
+    .welcome-card h1 {
+      font-size: 38px;
+      color: #4169e1;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .welcome-card p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .welcome-card .login-btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .welcome-card .login-btn:hover {
+      transform: translateY(-2px);
+    }
+    .company-intro {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+    .company-intro h3 {
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+    .company-intro p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="homepage.html" class="logo">CarTrader</a>
+    <div class="nav-links">
+      <a href="homepage.html">Home</a>
+      <a href="seller_portal.php">Seller Portal</a>
+      <a href="searchpage.php">Search</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="welcome-card">
+      <h1>Welcome to CarTrader.</h1>
+      <p>The Online Car Trading Platform for Buyers & Sellers.<br>Find your dream car or list your vehicle easily.</p>
+      <a href="login.php" class="login-btn">Login →</a>
+      
+      <div class="company-intro">
+        <h3>About CarTrader</h3>
+        <p>CarTrader is China's fastest-growing online car marketplace. We connect thousands of verified sellers with car buyers across the country. Whether you're looking to buy your dream car or sell your vehicle quickly, CarTrader makes it simple, safe, and efficient.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
